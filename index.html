@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hipercrom — Cromo Duro e Brunimento | Sumaré SP</title>
+  <meta name="description" content="Hipercrom: aplicação de cromo duro, brunimento de camisas de cilindro e fabricação de hastes hidráulicas em Sumaré/SP. Empresa do Grupo Brasimek."/>
+  <meta name="keywords" content="cromo duro sumaré, brunimento camisas cilindro, hastes hidráulicas, recuperação pistões, hipercrom"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;1,6..12,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+/* ─────────────────────────────────────────────────────
+   TOKENS
+───────────────────────────────────────────────────── */
+:root {
+  --black:      #0a0a0a;
+  --dark:       #111111;
+  --dark-2:     #1a1a1a;
+  --dark-3:     #242424;
+  --steel:      #1a2a3a;
+  --blue:       #0d47a1;
+  --blue-mid:   #1565c0;
+  --blue-lt:    #1e88e5;
+  --blue-pale:  #e3f0ff;
+  --chrome-1:   #6b7280;
+  --chrome-2:   #9ca3af;
+  --chrome-3:   #d1d5db;
+  --white:      #ffffff;
+  --off:        #f8fafc;
+  --off-2:      #f0f4f8;
+  --gray-200:   #e2e8f0;
+  --gray-400:   #94a3b8;
+  --gray-600:   #475569;
+  --text:       #1e293b;
+  --text-muted: #64748b;
+
+  --font-head:  'Oswald', sans-serif;
+  --font-body:  'Nunito Sans', sans-serif;
+  --r:          6px;
+  --sh-sm:      0 2px 10px rgba(0,0,0,.08);
+  --sh-md:      0 8px 30px rgba(0,0,0,.14);
+  --sh-lg:      0 20px 60px rgba(0,0,0,.2);
+  --tr:         .25s ease;
+
+  /* Chrome shimmer gradient */
+  --chrome: linear-gradient(105deg,
+    #4a5568 0%, #718096 20%, #a0aec0 40%,
+    #cbd5e0 50%, #a0aec0 60%, #718096 80%, #4a5568 100%);
+}
+
+/* ─────────────────────────────────────────────────────
+   RESET
+───────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);color:var(--text);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button,input,textarea,select{font-family:inherit}
+
+/* ─────────────────────────────────────────────────────
+   UTILITY
+───────────────────────────────────────────────────── */
+.container{width:100%;max-width:1180px;margin-inline:auto;padding-inline:24px}
+
+.lbl{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-head);font-size:.7rem;font-weight:400;
+  letter-spacing:.25em;text-transform:uppercase;color:var(--blue-lt);
+  margin-bottom:14px;
+}
+.lbl::before{content:'';display:block;width:28px;height:2px;background:var(--blue-lt)}
+.lbl-chrome{color:var(--chrome-3)}
+.lbl-chrome::before{background:var(--chrome-3)}
+
+.h2{
+  font-family:var(--font-head);font-size:clamp(2rem,4vw,3rem);
+  font-weight:700;line-height:1.05;letter-spacing:.02em;
+  text-transform:uppercase;color:var(--text);margin-bottom:16px;
+}
+.h2 em{font-style:normal;color:var(--blue-mid)}
+.h2-white{color:var(--white)}
+.h2-white em{color:var(--blue-lt)}
+.lead{font-size:1rem;font-weight:300;line-height:1.75;color:var(--text-muted);max-width:520px}
+.lead-white{color:rgba(255,255,255,.6)}
+
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:13px 30px;border-radius:var(--r);
+  font-family:var(--font-head);font-size:.95rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;
+  cursor:pointer;border:none;transition:all var(--tr);white-space:nowrap;
+}
+.btn-blue{background:var(--blue-mid);color:#fff;box-shadow:0 4px 16px rgba(21,101,192,.35)}
+.btn-blue:hover{background:var(--blue);transform:translateY(-2px);box-shadow:0 8px 24px rgba(21,101,192,.45)}
+.btn-white-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+.btn-white-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-dark{background:var(--dark);color:#fff}
+.btn-dark:hover{background:var(--dark-3);transform:translateY(-2px);box-shadow:var(--sh-md)}
+
+/* chrome accent line */
+.chrome-line{
+  height:3px;width:100%;
+  background:var(--chrome);
+  background-size:300% 100%;
+  animation:chromeShimmer 4s ease infinite;
+}
+@keyframes chromeShimmer{
+  0%{background-position:0% 0}50%{background-position:100% 0}100%{background-position:0% 0}
+}
+
+/* scroll reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+.rv.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+.d4{transition-delay:.32s}.d5{transition-delay:.4s}.d6{transition-delay:.48s}
+
+/* ─────────────────────────────────────────────────────
+   FLOATING WHATSAPP
+───────────────────────────────────────────────────── */
+.wa-float{
+  position:fixed;bottom:28px;right:28px;z-index:9999;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;box-shadow:0 4px 20px rgba(37,211,102,.45);
+  transition:transform var(--tr),box-shadow var(--tr);
+  animation:waPulse 2.5s ease infinite;
+}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 8px 28px rgba(37,211,102,.55)}
+@keyframes waPulse{
+  0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.45)}
+  50%{box-shadow:0 4px 30px rgba(37,211,102,.7),0 0 0 10px rgba(37,211,102,.08)}
+}
+
+/* ─────────────────────────────────────────────────────
+   NAVBAR
+───────────────────────────────────────────────────── */
+#nav{
+  position:fixed;top:0;inset-inline:0;z-index:1000;
+  padding:14px 0;transition:background .3s,box-shadow .3s,padding .3s;
+}
+#nav.solid{background:var(--black);padding:10px 0;box-shadow:0 2px 24px rgba(0,0,0,.5)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-logo img{height:40px;display:block;filter:brightness(1.1);transition:height var(--tr)}
+#nav.solid .nav-logo img{height:34px}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{
+  font-family:var(--font-head);font-size:.8rem;font-weight:400;
+  letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);
+  padding:8px 12px;border-radius:4px;transition:all var(--tr);
+}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.nav-cta{background:var(--blue-mid)!important;color:#fff!important;border-radius:var(--r)!important;padding:9px 18px!important}
+.nav-cta:hover{background:var(--blue)!important}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.nav-burger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:var(--tr)}
+.nav-burger.x span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.x span:nth-child(2){opacity:0}
+.nav-burger.x span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.nav-drawer{
+  display:none;position:fixed;inset:0;background:var(--black);z-index:999;
+  padding:90px 32px 40px;flex-direction:column;gap:4px;
+}
+.nav-drawer.open{display:flex}
+.nav-drawer a{
+  font-family:var(--font-head);font-size:1.6rem;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.7);
+  padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);
+  transition:color var(--tr);
+}
+.nav-drawer a:hover{color:var(--blue-lt)}
+
+/* ─────────────────────────────────────────────────────
+   HERO
+───────────────────────────────────────────────────── */
+#hero{
+  min-height:100vh;position:relative;display:flex;align-items:center;
+  overflow:hidden;background:var(--black);
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('img/fachada.jpg') center/cover no-repeat;
+  opacity:.22;transform:scale(1.05);
+  animation:heroZoom 18s ease-in-out infinite alternate;
+}
+@keyframes heroZoom{from{transform:scale(1.05)}to{transform:scale(1.12)}}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(10,10,10,.92) 0%,rgba(13,71,161,.3) 60%,rgba(10,10,10,.85) 100%);
+}
+/* Blue electric line on left edge */
+.hero-edge{
+  position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,transparent 0%,var(--blue-lt) 30%,var(--blue-mid) 70%,transparent 100%);
+}
+.hero-content{position:relative;z-index:1;padding:130px 0 100px;max-width:700px}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-head);font-size:.68rem;font-weight:400;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--blue-lt);
+  margin-bottom:24px;
+}
+.hero-eyebrow::before{content:'';display:block;width:28px;height:2px;background:var(--blue-lt)}
+.hero-h1{
+  font-family:var(--font-head);font-size:clamp(3rem,7.5vw,5.8rem);
+  font-weight:700;line-height:.96;letter-spacing:.03em;
+  text-transform:uppercase;color:var(--white);margin-bottom:10px;
+}
+.hero-h1-chrome{
+  font-family:var(--font-head);font-size:clamp(2rem,5vw,3.8rem);
+  font-weight:300;line-height:1;letter-spacing:.08em;
+  text-transform:uppercase;
+  background:var(--chrome);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;background-size:300% 100%;
+  animation:chromeShimmer 4s ease infinite;
+  margin-bottom:28px;
+  display:block;
+}
+.hero-sub{font-size:1.05rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.65);margin-bottom:38px;max-width:480px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{
+  display:flex;margin-top:56px;padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.1);gap:0;position:relative;z-index:1;
+}
+.hero-stat{flex:1;padding-inline:20px;border-right:1px solid rgba(255,255,255,.1)}
+.hero-stat:first-child{padding-left:0}
+.hero-stat:last-child{border-right:none}
+.hero-stat-n{
+  font-family:var(--font-head);font-size:2.2rem;font-weight:700;
+  line-height:1;margin-bottom:4px;
+  background:var(--chrome);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;background-size:300% 100%;
+  animation:chromeShimmer 4s ease infinite;
+}
+.hero-stat-l{font-size:.68rem;font-weight:300;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.09em}
+
+/* ─────────────────────────────────────────────────────
+   SOBRE
+───────────────────────────────────────────────────── */
+#sobre{padding:100px 0;background:var(--white)}
+.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.sobre-text p{font-size:.97rem;font-weight:300;line-height:1.8;color:var(--text-muted);margin-bottom:14px}
+.sobre-text strong{color:var(--text);font-weight:600}
+.sobre-cards{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.sobre-card{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 16px;border-radius:var(--r);
+  background:var(--off);border-left:3px solid var(--blue-mid);
+  font-family:var(--font-head);font-size:.92rem;font-weight:500;
+  letter-spacing:.03em;color:var(--text);
+  transition:background var(--tr);
+}
+.sobre-card:hover{background:var(--blue-pale)}
+.sobre-card i{color:var(--blue-mid);width:20px;text-align:center}
+.sobre-visual{position:relative}
+.sobre-logo-block{
+  background:var(--black);border-radius:12px;padding:48px 36px;
+  display:flex;flex-direction:column;align-items:center;gap:32px;
+  position:relative;overflow:hidden;
+}
+.sobre-logo-block::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(21,101,192,.2) 0%,transparent 70%);
+}
+.sobre-logo-block img{max-width:280px;width:100%;position:relative;z-index:1}
+.sobre-metrics{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:rgba(255,255,255,.06);border-radius:8px;overflow:hidden;
+  width:100%;position:relative;z-index:1;
+}
+.sobre-met-box{background:var(--dark-2);padding:18px;text-align:center}
+.sobre-met-n{
+  font-family:var(--font-head);font-size:1.8rem;font-weight:700;line-height:1;margin-bottom:4px;
+  background:var(--chrome);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;background-size:300% 100%;
+  animation:chromeShimmer 4s ease infinite;
+}
+.sobre-met-l{font-size:.68rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.07em}
+.grupo-badge{
+  display:inline-flex;align-items:center;gap:10px;margin-top:4px;
+  background:rgba(21,101,192,.12);border:1px solid rgba(21,101,192,.3);
+  color:var(--blue-lt);padding:10px 16px;border-radius:6px;
+  font-family:var(--font-head);font-size:.82rem;font-weight:400;letter-spacing:.08em;
+  text-transform:uppercase;position:relative;z-index:1;
+}
+
+/* ─────────────────────────────────────────────────────
+   SERVIÇOS
+───────────────────────────────────────────────────── */
+#servicos{padding:100px 0;background:var(--black);position:relative;overflow:hidden}
+.srv-bg-text{
+  position:absolute;bottom:-20px;right:-20px;
+  font-family:var(--font-head);font-size:22vw;font-weight:700;
+  text-transform:uppercase;color:rgba(255,255,255,.018);line-height:1;
+  pointer-events:none;user-select:none;
+}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.06);margin-top:52px;position:relative;z-index:1}
+.srv-item{
+  background:var(--dark);padding:44px 36px;
+  transition:background var(--tr);cursor:default;position:relative;overflow:hidden;
+}
+.srv-item::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--chrome);background-size:300% 100%;
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s ease;
+  animation:none;
+}
+.srv-item:hover{background:var(--dark-2)}
+.srv-item:hover::before{transform:scaleX(1);animation:chromeShimmer 3s ease infinite}
+.srv-num{
+  font-family:var(--font-head);font-size:4rem;font-weight:700;line-height:1;
+  color:rgba(255,255,255,.04);margin-bottom:20px;
+  transition:color var(--tr);
+}
+.srv-item:hover .srv-num{color:rgba(255,255,255,.08)}
+.srv-icon{
+  width:52px;height:52px;border-radius:10px;
+  background:rgba(21,101,192,.15);color:var(--blue-lt);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.25rem;margin-bottom:20px;
+  transition:background var(--tr),color var(--tr);
+}
+.srv-item:hover .srv-icon{background:var(--blue-mid);color:#fff}
+.srv-name{
+  font-family:var(--font-head);font-size:1.4rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.04em;color:#fff;margin-bottom:14px;
+}
+.srv-desc{font-size:.88rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.55)}
+.srv-apps{display:flex;flex-direction:column;gap:7px;margin-top:20px}
+.srv-app{
+  display:flex;align-items:center;gap:8px;
+  font-size:.8rem;color:rgba(255,255,255,.45);font-weight:300;
+}
+.srv-app i{color:var(--blue-lt);font-size:.65rem;flex-shrink:0}
+
+/* ─────────────────────────────────────────────────────
+   PROCESSO
+───────────────────────────────────────────────────── */
+#processo{padding:100px 0;background:var(--off)}
+.proc-header{text-align:center;margin-bottom:56px}
+.proc-header .lead{margin-inline:auto}
+.proc-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.proc-steps::before{
+  content:'';position:absolute;top:36px;left:10%;right:10%;height:2px;
+  background:linear-gradient(90deg,var(--blue-pale),var(--blue-mid),var(--blue-pale));
+  z-index:0;
+}
+.proc-step{
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;padding:0 12px;position:relative;z-index:1;
+}
+.proc-step-circle{
+  width:72px;height:72px;border-radius:50%;
+  background:var(--white);border:3px solid var(--blue-mid);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;color:var(--blue-mid);margin-bottom:20px;
+  box-shadow:0 4px 16px rgba(21,101,192,.2);
+  transition:all var(--tr);
+}
+.proc-step:hover .proc-step-circle{background:var(--blue-mid);color:#fff;transform:scale(1.1)}
+.proc-step-title{font-family:var(--font-head);font-size:.95rem;font-weight:600;color:var(--text);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.proc-step-desc{font-size:.78rem;font-weight:300;color:var(--text-muted);line-height:1.6}
+
+/* ─────────────────────────────────────────────────────
+   QUALIDADE / DIFERENCIAIS
+───────────────────────────────────────────────────── */
+#qualidade{padding:100px 0;background:var(--steel);position:relative;overflow:hidden}
+.qual-bg{
+  position:absolute;left:-40px;top:50%;transform:translateY(-50%);
+  font-family:var(--font-head);font-size:28vw;font-weight:700;
+  text-transform:uppercase;color:rgba(255,255,255,.02);line-height:1;
+  pointer-events:none;user-select:none;
+}
+.qual-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;position:relative;z-index:1}
+.qual-items{display:flex;flex-direction:column;gap:16px;margin-top:32px}
+.qual-item{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+  border-radius:8px;transition:background var(--tr);
+}
+.qual-item:hover{background:rgba(255,255,255,.08)}
+.qual-ico{
+  width:44px;height:44px;flex-shrink:0;border-radius:8px;
+  background:rgba(21,101,192,.2);color:var(--blue-lt);
+  display:flex;align-items:center;justify-content:center;font-size:1rem;
+}
+.qual-title{font-family:var(--font-head);font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px;letter-spacing:.03em;text-transform:uppercase}
+.qual-text{font-size:.83rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.6}
+.qual-right{display:flex;flex-direction:column;gap:20px}
+.spec-block{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+  border-radius:10px;padding:28px;
+}
+.spec-block h4{
+  font-family:var(--font-head);font-size:.7rem;font-weight:400;
+  letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);
+  margin-bottom:20px;
+}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.spec-item{}
+.spec-val{
+  font-family:var(--font-head);font-size:1.9rem;font-weight:700;line-height:1;margin-bottom:3px;
+  background:var(--chrome);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;background-size:300% 100%;
+  animation:chromeShimmer 4s ease infinite;
+}
+.spec-key{font-size:.73rem;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.07em}
+.chrome-bar{
+  display:flex;align-items:center;gap:14px;padding:16px 20px;
+  border:2px solid rgba(255,255,255,.1);border-radius:8px;
+  background:rgba(255,255,255,.03);
+}
+.chrome-bar-icon{font-size:1.4rem;color:var(--chrome-3)}
+.chrome-bar-text{font-family:var(--font-head);font-size:1rem;font-weight:500;color:rgba(255,255,255,.8);letter-spacing:.06em;text-transform:uppercase}
+.chrome-bar-sub{font-size:.73rem;color:rgba(255,255,255,.35);margin-top:2px}
+
+/* ─────────────────────────────────────────────────────
+   BRASIMEK BAND
+───────────────────────────────────────────────────── */
+#brasimek-band{
+  padding:60px 0;background:var(--blue);position:relative;overflow:hidden;
+}
+.bb-noise{
+  position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(
+    0deg,transparent,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 4px
+  );
+}
+.bb-inner{
+  display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;
+  position:relative;z-index:1;
+}
+.bb-text{}
+.bb-text p{font-size:.95rem;color:rgba(255,255,255,.75);font-weight:300;max-width:460px;margin-top:8px}
+.bb-badge{
+  flex-shrink:0;background:rgba(0,0,0,.2);
+  border-radius:10px;padding:20px 28px;text-align:center;
+}
+.bb-badge-sub{font-family:var(--font-head);font-size:.65rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px}
+.bb-badge-name{font-family:var(--font-head);font-size:2rem;font-weight:700;color:#fff;letter-spacing:.04em;text-transform:uppercase}
+
+/* ─────────────────────────────────────────────────────
+   CONTATO
+───────────────────────────────────────────────────── */
+#contato{padding:100px 0;background:var(--off)}
+.cont-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:start}
+.cont-info{display:flex;flex-direction:column;gap:12px;margin-top:32px}
+.inf-card{
+  display:flex;align-items:flex-start;gap:14px;
+  background:var(--white);border-radius:var(--r);padding:18px;
+  border:1px solid var(--gray-200);transition:box-shadow var(--tr);
+}
+.inf-card:hover{box-shadow:var(--sh-sm)}
+.inf-ico{
+  width:42px;height:42px;border-radius:8px;
+  background:rgba(13,71,161,.1);color:var(--blue-mid);
+  display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;
+}
+.inf-lbl{font-family:var(--font-head);font-size:.65rem;font-weight:400;text-transform:uppercase;letter-spacing:.14em;color:var(--text-muted);margin-bottom:4px}
+.inf-val{font-size:.93rem;font-weight:600;color:var(--text);line-height:1.55}
+.inf-val a{color:var(--blue-mid)}.inf-val a:hover{text-decoration:underline}
+.horario{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.h-d{font-size:.74rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em}
+.h-h{font-size:.88rem;font-weight:600;color:var(--text)}
+.cont-form-wrap{background:var(--white);border-radius:10px;padding:40px;border:1px solid var(--gray-200)}
+.cont-form-wrap h3{font-family:var(--font-head);font-size:1.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text);margin-bottom:26px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f-group{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.f-group label{font-family:var(--font-head);font-size:.65rem;font-weight:400;text-transform:uppercase;letter-spacing:.14em;color:var(--text-muted)}
+.f-group input,.f-group textarea,.f-group select{
+  border:1.5px solid var(--gray-200);border-radius:var(--r);
+  padding:11px 14px;font-size:.93rem;color:var(--text);background:var(--white);
+  transition:border-color var(--tr),box-shadow var(--tr);outline:none;width:100%;
+}
+.f-group input:focus,.f-group textarea:focus,.f-group select:focus{
+  border-color:var(--blue-mid);box-shadow:0 0 0 3px rgba(21,101,192,.1);
+}
+.f-group textarea{resize:vertical;min-height:100px}
+.f-submit{
+  width:100%;background:var(--blue-mid);color:#fff;border:none;
+  border-radius:var(--r);padding:14px;
+  font-family:var(--font-head);font-size:1rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  transition:all var(--tr);
+}
+.f-submit:hover{background:var(--blue);transform:translateY(-2px);box-shadow:0 6px 22px rgba(13,71,161,.35)}
+.f-submit:disabled{background:var(--gray-400);transform:none;box-shadow:none;cursor:not-allowed}
+
+/* ─────────────────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────────────────── */
+footer{background:var(--black);padding:56px 0 28px}
+.ft-chrome-line{margin-bottom:0}
+.ft-top{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;
+  padding:48px 0 40px;border-bottom:1px solid rgba(255,255,255,.05);margin-bottom:28px;
+}
+.ft-brand img{max-width:220px;opacity:.9}
+.ft-brand p{font-size:.82rem;color:rgba(255,255,255,.3);margin-top:14px;font-weight:300;line-height:1.65;max-width:240px}
+.ft-col h4{font-family:var(--font-head);font-size:.65rem;font-weight:400;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.3);margin-bottom:16px}
+.ft-col ul{display:flex;flex-direction:column;gap:9px}
+.ft-col ul li a{font-size:.85rem;color:rgba(255,255,255,.5);transition:color var(--tr)}
+.ft-col ul li a:hover{color:var(--blue-lt)}
+.ft-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.ft-copy{font-size:.76rem;color:rgba(255,255,255,.2)}
+.ft-cnpj{font-size:.72rem;color:rgba(255,255,255,.15);font-family:monospace}
+
+/* ─────────────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────────────── */
+@media(max-width:1024px){
+  .srv-grid{grid-template-columns:1fr 1fr}
+  .proc-steps{grid-template-columns:1fr 1fr;row-gap:36px}
+  .proc-steps::before{display:none}
+  .ft-top{grid-template-columns:1fr 1fr;row-gap:32px}
+}
+@media(max-width:900px){
+  .sobre-grid,.qual-grid,.cont-grid{grid-template-columns:1fr;gap:48px}
+  .hero-stats{flex-direction:column;gap:14px}
+  .hero-stat{border-right:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .hero-stat:last-child{border-bottom:none}
+  .bb-inner{flex-direction:column}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-burger{display:flex}
+  .srv-grid{grid-template-columns:1fr}
+  .f-row{grid-template-columns:1fr}
+  .ft-top{grid-template-columns:1fr}
+  .spec-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:500px){
+  .proc-steps{grid-template-columns:1fr}
+  .cont-form-wrap{padding:24px}
+  .sobre-metrics{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ WHATSAPP ══ -->
+<a href="https://wa.me/551938640806" target="_blank" rel="noopener" class="wa-float" title="WhatsApp Hipercrom">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ══ DRAWER ══ -->
+<div class="nav-drawer" id="drawer">
+  <a href="#sobre"      onclick="closeDrawer()">Sobre</a>
+  <a href="#servicos"   onclick="closeDrawer()">Serviços</a>
+  <a href="#processo"   onclick="closeDrawer()">Processo</a>
+  <a href="#qualidade"  onclick="closeDrawer()">Qualidade</a>
+  <a href="#contato"    onclick="closeDrawer()">Contato</a>
+</div>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" onclick="scrollTop(event)">
+        <img src="logo.png" alt="Hipercrom"/>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#qualidade">Qualidade</a></li>
+        <li><a href="#contato" class="nav-cta">Contato</a></li>
+      </ul>
+      <button class="nav-burger" id="burger" onclick="toggleDrawer()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-edge"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Sumaré · São Paulo · Brasil</div>
+      <h1 class="hero-h1">Cromo Duro</h1>
+      <span class="hero-h1-chrome">de Precisão Industrial</span>
+      <p class="hero-sub">
+        Especialistas em aplicação de cromo duro, brunimento de camisas de cilindro
+        e fabricação de hastes hidráulicas — com excelência técnica desde a fundação do Grupo Brasimek.
+      </p>
+      <div class="hero-btns">
+        <a href="#servicos" class="btn btn-blue">
+          <i class="fas fa-industry"></i> Nossos Serviços
+        </a>
+        <a href="#contato" class="btn btn-white-outline">
+          <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-n">HV 1000</div>
+          <div class="hero-stat-l">Dureza Máxima</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-n">0,2 μm</div>
+          <div class="hero-stat-l">Rugosidade Ra</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-n">3</div>
+          <div class="hero-stat-l">Especialidades</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-n">Grupo</div>
+          <div class="hero-stat-l">Brasimek</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOBRE ══ -->
+<section id="sobre">
+  <div class="container">
+    <div class="sobre-grid">
+      <div>
+        <span class="lbl rv">Quem Somos</span>
+        <h2 class="h2 rv d1">Precisão em <em>cada superfície</em></h2>
+        <div class="rv d2">
+          <p>A <strong>Hipercrom</strong> é uma empresa do Grupo Brasimek, especializada em processos de acabamento superficial de alta precisão para a indústria mecânica e hidráulica.</p>
+          <p>Atuamos na aplicação de <strong>cromo duro eletrolítico</strong>, no <strong>brunimento de camisas de cilindros</strong> e na <strong>fabricação e recuperação de hastes</strong> e pistões hidráulicos e pneumáticos — processos que exigem o mais alto grau de controle técnico e qualidade.</p>
+          <p>Localizados em Sumaré/SP, atendemos indústrias dos setores automotivo, hidráulico, pneumático, papel e celulose, energia e manutenção industrial.</p>
+        </div>
+        <div class="sobre-cards rv d3">
+          <div class="sobre-card">
+            <i class="fas fa-layer-group"></i> Cromo duro eletrolítico de alta precisão
+          </div>
+          <div class="sobre-card">
+            <i class="fas fa-circle-dot"></i> Brunimento com controle micrométrico
+          </div>
+          <div class="sobre-card">
+            <i class="fas fa-arrows-up-down"></i> Fabricação e recuperação de hastes
+          </div>
+          <div class="sobre-card">
+            <i class="fas fa-building"></i> Empresa do Grupo Brasimek — Campinas/SP
+          </div>
+        </div>
+      </div>
+      <div class="sobre-visual rv d2">
+        <div class="sobre-logo-block">
+          <img src="logo.png" alt="Hipercrom Logo"/>
+          <div class="sobre-metrics">
+            <div class="sobre-met-box">
+              <div class="sobre-met-n">HV<br>800–1000</div>
+              <div class="sobre-met-l">Dureza Vickers</div>
+            </div>
+            <div class="sobre-met-box">
+              <div class="sobre-met-n">0,08<br>μm</div>
+              <div class="sobre-met-l">Coef. Atrito</div>
+            </div>
+            <div class="sobre-met-box">
+              <div class="sobre-met-n">Sumaré</div>
+              <div class="sobre-met-l">Localização</div>
+            </div>
+            <div class="sobre-met-box">
+              <div class="sobre-met-n">Grupo<br>BSK</div>
+              <div class="sobre-met-l">Brasimek</div>
+            </div>
+          </div>
+          <a href="https://brasimek.com.br" target="_blank" rel="noopener" class="grupo-badge">
+            <i class="fas fa-link"></i> Grupo Brasimek — Campinas/SP
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVIÇOS ══ -->
+<section id="servicos">
+  <div class="srv-bg-text">CROM</div>
+  <div class="container">
+    <span class="lbl lbl-chrome rv">Especialidades</span>
+    <h2 class="h2 h2-white rv d1">Nossos <em>Serviços</em></h2>
+    <div class="srv-grid">
+
+      <div class="srv-item rv">
+        <div class="srv-num">01</div>
+        <div class="srv-icon"><i class="fas fa-layer-group"></i></div>
+        <div class="srv-name">Cromo Duro</div>
+        <div class="srv-desc">
+          Revestimento eletrolítico de cromo hexavalente que confere à superfície metálica alta dureza, baixo coeficiente de fricção e excelente resistência ao desgaste e à corrosão.
+        </div>
+        <div class="srv-apps">
+          <div class="srv-app"><i class="fas fa-check"></i>Recuperação de hastes hidráulicas e pneumáticas</div>
+          <div class="srv-app"><i class="fas fa-check"></i>Recuperação de colos e pinos de eixos</div>
+          <div class="srv-app"><i class="fas fa-check"></i>Cilindros e comandos hidráulicos</div>
+          <div class="srv-app"><i class="fas fa-check"></i>Superfícies de alta resistência ao desgaste</div>
+          <div class="srv-app"><i class="fas fa-check"></i>Proteção anticorrosão industrial</div>
+        </div>
+      </div>
+
+      <div class="srv-item rv d2">
+        <div class="srv-num">02</div>
+        <div class="srv-icon"><i class="fas fa-circle-dot"></i></div>
+        <div class="srv-name">Brunimento de Camisas</div>
+        <div class="srv-desc">
+          Processo de retificação por abrasão controlada que produz superfícies de altíssima precisão dimensional e acabamento superficial ideal para camisas de cilindros.
+        </div>
+        <div class="srv-apps">
+          <div class="srv-app"><i class="fas fa-check"></i>Camisas de cilindros de motores</div>
+          <div class="srv-app"><i class="fas fa-check"></i>Cilindros de compressores industriais</div>
+          <div class="srv-app"><i class="fas fa-check"></i>Controle de rugosidade Ra ≤ 0,2 μm</div>
+          <div class="srv-app"><i class="fas fa-check"></i>Melhora vedação e reduz consumo de óleo</div>
+          <div class="srv-app"><i class="fas fa-check"></i>Prolonga vida útil do conjunto</div>
+        </div>
+      </div>
+
+      <div class="srv-item rv d4">
+        <div class="srv-num">03</div>
+        <div class="srv-icon"><i class="fas fa-arrows-up-down"></i></div>
+        <div class="srv-name">Hastes e Pistões</div>
+        <div class="srv-desc">
+          Fabricação de novas hastes e pistões e recuperação completa de peças desgastadas de cilindros hidráulicos e pneumáticos, com alta precisão dimensional.
+        </div>
+        <div class="srv-apps">
+          <div class="srv-app"><i class="fas fa-check"></i>Fabricação de hastes hidráulicas novas</div>
+          <div class="srv-app"><i class="fas fa-check"></i>Recuperação de hastes desgastadas ou danificadas</div>
+          <div class="srv-app"><i class="fas fa-check"></i>Pistões para cilindros industriais</div>
+          <div class="srv-app"><i class="fas fa-check"></i>Aplicação de cromo na haste após fabricação</div>
+          <div class="srv-app"><i class="fas fa-check"></i>Compatível com cilindros nacionais e importados</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESSO ══ -->
+<section id="processo">
+  <div class="container">
+    <div class="proc-header">
+      <span class="lbl rv" style="justify-content:center">Como Fazemos</span>
+      <h2 class="h2 rv d1">Processo de <em>Cromo Duro</em></h2>
+      <p class="lead rv d2">Cinco etapas controladas que garantem aderência, dureza e acabamento perfeitos em cada peça.</p>
+    </div>
+    <div class="proc-steps">
+      <div class="proc-step rv">
+        <div class="proc-step-circle"><i class="fas fa-magnifying-glass"></i></div>
+        <div class="proc-step-title">Inspeção</div>
+        <div class="proc-step-desc">Análise dimensional e visual da peça recebida</div>
+      </div>
+      <div class="proc-step rv d1">
+        <div class="proc-step-circle"><i class="fas fa-spray-can"></i></div>
+        <div class="proc-step-title">Preparação</div>
+        <div class="proc-step-desc">Limpeza, desengraxe e ativação da superfície metálica</div>
+      </div>
+      <div class="proc-step rv d2">
+        <div class="proc-step-circle"><i class="fas fa-bolt"></i></div>
+        <div class="proc-step-title">Eletrólise</div>
+        <div class="proc-step-desc">Banho eletrolítico com deposição controlada do cromo</div>
+      </div>
+      <div class="proc-step rv d3">
+        <div class="proc-step-circle"><i class="fas fa-gear"></i></div>
+        <div class="proc-step-title">Acabamento</div>
+        <div class="proc-step-desc">Retificação para atingir dimensão e rugosidade especificadas</div>
+      </div>
+      <div class="proc-step rv d4">
+        <div class="proc-step-circle"><i class="fas fa-ruler-combined"></i></div>
+        <div class="proc-step-title">Controle Final</div>
+        <div class="proc-step-desc">Inspeção dimensional e teste de aderência do revestimento</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUALIDADE ══ -->
+<section id="qualidade">
+  <div class="qual-bg">HV</div>
+  <div class="container">
+    <div class="qual-grid">
+      <div>
+        <span class="lbl lbl-chrome rv">Diferenciais</span>
+        <h2 class="h2 h2-white rv d1">Por que escolher a <em>Hipercrom</em></h2>
+        <p class="lead lead-white rv d2">Décadas de especialização em processos de revestimento de precisão para a indústria exigente.</p>
+        <div class="qual-items rv d3">
+          <div class="qual-item">
+            <div class="qual-ico"><i class="fas fa-microchip"></i></div>
+            <div>
+              <div class="qual-title">Controle de Espessura</div>
+              <div class="qual-text">Deposição precisa de cromo conforme especificação do cliente, de 5 μm a vários milímetros.</div>
+            </div>
+          </div>
+          <div class="qual-item">
+            <div class="qual-ico"><i class="fas fa-shield-halved"></i></div>
+            <div>
+              <div class="qual-title">Alta Dureza e Resistência</div>
+              <div class="qual-text">Cromo duro com dureza entre HV 800 e 1000 — superior a qualquer tratamento térmico convencional.</div>
+            </div>
+          </div>
+          <div class="qual-item">
+            <div class="qual-ico"><i class="fas fa-clock-rotate-left"></i></div>
+            <div>
+              <div class="qual-title">Recuperação Econômica</div>
+              <div class="qual-text">Recupere peças desgastadas ao invés de substituí-las — redução de custo de manutenção de até 70%.</div>
+            </div>
+          </div>
+          <div class="qual-item">
+            <div class="qual-ico"><i class="fas fa-building"></i></div>
+            <div>
+              <div class="qual-title">Grupo Brasimek</div>
+              <div class="qual-text">Respaldo técnico de um grupo industrial com mais de 37 anos no mercado e certificação ISO 9001.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="qual-right rv d2">
+        <div class="spec-block">
+          <h4>Especificações Técnicas — Cromo Duro</h4>
+          <div class="spec-grid">
+            <div class="spec-item">
+              <div class="spec-val">HV 1000</div>
+              <div class="spec-key">Dureza Máxima</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-val">0,08</div>
+              <div class="spec-key">Coef. Atrito</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-val">5–200 μm</div>
+              <div class="spec-key">Espessura</div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-val">Ra ≤0,2</div>
+              <div class="spec-key">Rugosidade Brunimento</div>
+            </div>
+          </div>
+        </div>
+        <div class="spec-block">
+          <h4>Setores Atendidos</h4>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div class="chrome-bar">
+              <span class="chrome-bar-icon"><i class="fas fa-car-side"></i></span>
+              <div>
+                <div class="chrome-bar-text">Automotivo</div>
+                <div class="chrome-bar-sub">Motores, compressores, transmissões</div>
+              </div>
+            </div>
+            <div class="chrome-bar">
+              <span class="chrome-bar-icon"><i class="fas fa-droplet"></i></span>
+              <div>
+                <div class="chrome-bar-text">Hidráulico / Pneumático</div>
+                <div class="chrome-bar-sub">Cilindros, hastes, pistões industriais</div>
+              </div>
+            </div>
+            <div class="chrome-bar">
+              <span class="chrome-bar-icon"><i class="fas fa-industry"></i></span>
+              <div>
+                <div class="chrome-bar-text">Manutenção Industrial</div>
+                <div class="chrome-bar-sub">Recuperação de peças em geral</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BRASIMEK BAND ══ -->
+<section id="brasimek-band">
+  <div class="bb-noise"></div>
+  <div class="container">
+    <div class="bb-inner">
+      <div class="bb-text rv">
+        <span class="lbl" style="color:rgba(255,255,255,.6)">Conheça também</span>
+        <h3 style="font-family:var(--font-head);font-size:clamp(1.4rem,3vw,2.2rem);font-weight:700;color:#fff;letter-spacing:.03em;text-transform:uppercase">
+          Brasimek Engenharia e Equipamentos
+        </h3>
+        <p>Nossa empresa irmã em Campinas/SP — especializada em usinagem, ferramentaria, caldeiraria, soldas especiais e projetos de engenharia.</p>
+        <a href="https://brasimek.com.br" target="_blank" rel="noopener" class="btn btn-dark" style="margin-top:22px">
+          <i class="fas fa-external-link-alt"></i> Visitar Brasimek
+        </a>
+      </div>
+      <div class="bb-badge rv d2">
+        <div class="bb-badge-sub">Empresa Irmã</div>
+        <div class="bb-badge-name">Brasimek</div>
+        <div class="bb-badge-sub" style="margin-top:4px">Campinas · SP</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTATO ══ -->
+<section id="contato">
+  <div class="container">
+    <div style="margin-bottom:52px">
+      <span class="lbl rv">Fale Conosco</span>
+      <h2 class="h2 rv d1">Solicite um <em>Orçamento</em></h2>
+    </div>
+    <div class="cont-grid">
+      <div>
+        <p class="lead rv">Entre em contato para discutir sua necessidade técnica. Atendemos peças unitárias e lotes industriais.</p>
+        <div class="cont-info">
+          <div class="inf-card rv d1">
+            <div class="inf-ico"><i class="fas fa-location-dot"></i></div>
+            <div>
+              <div class="inf-lbl">Endereço</div>
+              <div class="inf-val">Rua Serra Negra, 245<br>Parque das Indústrias — Sumaré/SP<br>CEP 13178-420</div>
+            </div>
+          </div>
+          <div class="inf-card rv d2">
+            <div class="inf-ico"><i class="fas fa-phone"></i></div>
+            <div>
+              <div class="inf-lbl">Telefone</div>
+              <div class="inf-val">
+                <a href="tel:+551938640806">(19) 3864-0806</a><br>
+                <a href="tel:+551932724539">(19) 3272-4539</a>
+              </div>
+            </div>
+          </div>
+          <div class="inf-card rv d3">
+            <div class="inf-ico"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <div class="inf-lbl">WhatsApp</div>
+              <div class="inf-val"><a href="https://wa.me/551938640806" target="_blank">(19) 3864-0806 — Clique para conversar</a></div>
+            </div>
+          </div>
+          <div class="inf-card rv d4">
+            <div class="inf-ico"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="inf-lbl">E-mail</div>
+              <div class="inf-val"><a href="mailto:contato@hipercrom.com.br">contato@hipercrom.com.br</a></div>
+            </div>
+          </div>
+          <div class="inf-card rv d5">
+            <div class="inf-ico"><i class="fas fa-clock"></i></div>
+            <div>
+              <div class="inf-lbl">Horário de Atendimento</div>
+              <div class="inf-val">
+                <div class="horario">
+                  <div><div class="h-d">Seg–Sex</div><div class="h-h">07h às 17h</div></div>
+                  <div><div class="h-d">Sáb e Dom</div><div class="h-h">Fechado</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cont-form-wrap rv d2">
+        <h3>Envie sua Mensagem</h3>
+        <form onsubmit="submitForm(event)">
+          <div class="f-row">
+            <div class="f-group">
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" placeholder="Seu nome" required/>
+            </div>
+            <div class="f-group">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" placeholder="Nome da empresa"/>
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" placeholder="seu@email.com" required/>
+            </div>
+            <div class="f-group">
+              <label for="tel">Telefone / WhatsApp</label>
+              <input type="tel" id="tel" placeholder="(00) 00000-0000"/>
+            </div>
+          </div>
+          <div class="f-group">
+            <label for="srv">Serviço</label>
+            <select id="srv">
+              <option value="">Selecione o serviço...</option>
+              <option>Cromo Duro</option>
+              <option>Brunimento de Camisas de Cilindro</option>
+              <option>Fabricação de Hastes Hidráulicas</option>
+              <option>Recuperação de Hastes / Pistões</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label for="peca">Descrição da Peça / Material</label>
+            <input type="text" id="peca" placeholder="Ex: haste hidráulica em aço 1045, ø50mm x 800mm"/>
+          </div>
+          <div class="f-group">
+            <label for="msg">Mensagem *</label>
+            <textarea id="msg" placeholder="Descreva a necessidade, dimensões, quantidade, prazo..." required></textarea>
+          </div>
+          <button type="submit" class="f-submit" id="fsub">
+            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="chrome-line ft-chrome-line"></div>
+  <div class="container">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <img src="logo.png" alt="Hipercrom"/>
+        <p>Indústria e Comércio Ltda — Sumaré/SP. Especialistas em cromo duro, brunimento e recuperação de hastes hidráulicas.</p>
+      </div>
+      <div class="ft-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Cromo Duro</a></li>
+          <li><a href="#servicos">Brunimento de Camisas</a></li>
+          <li><a href="#servicos">Fabricação de Hastes</a></li>
+          <li><a href="#servicos">Recuperação de Pistões</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+551938640806">(19) 3864-0806</a></li>
+          <li><a href="tel:+551932724539">(19) 3272-4539</a></li>
+          <li><a href="mailto:contato@hipercrom.com.br">contato@hipercrom.com.br</a></li>
+          <li><a href="#">Sumaré — SP</a></li>
+          <li><a href="https://brasimek.com.br" target="_blank">Grupo Brasimek</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p class="ft-copy">© 2024 Hipercrom Indústria e Comércio Ltda. Todos os direitos reservados.</p>
+      <span class="ft-cnpj">CNPJ: 60.398.922/0001-20</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Navbar */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 50), {passive:true});
+
+/* Drawer */
+function toggleDrawer(){
+  const d=document.getElementById('drawer'), b=document.getElementById('burger');
+  d.classList.toggle('open'); b.classList.toggle('x');
+  document.body.style.overflow = d.classList.contains('open') ? 'hidden' : '';
+}
+function closeDrawer(){
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('burger').classList.remove('x');
+  document.body.style.overflow = '';
+}
+function scrollTop(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}
+
+/* Reveal */
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}});
+},{threshold:0.1});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+/* Active nav */
+const secs = document.querySelectorAll('section[id]');
+const nas  = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(s=>{if(scrollY>=s.offsetTop-140)cur=s.id});
+  nas.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'var(--blue-lt)':''});
+},{passive:true});
+
+/* Form */
+function submitForm(e){
+  e.preventDefault();
+  const b=document.getElementById('fsub');
+  b.innerHTML='<i class="fas fa-spinner fa-spin"></i> Enviando...';
+  b.disabled=true;
+  setTimeout(()=>{
+    b.innerHTML='<i class="fas fa-check-circle"></i> Mensagem Enviada!';
+    b.style.background='#27ae60';
+    setTimeout(()=>{
+      b.innerHTML='<i class="fas fa-paper-plane"></i> Enviar Mensagem';
+      b.style.background=''; b.disabled=false; e.target.reset();
+    },3000);
+  },1200);
+}
+</script>
+</body>
+</html>

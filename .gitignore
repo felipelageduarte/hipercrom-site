@@ -1,0 +1,15 @@
+# Pastas antigas e de desenvolvimento
+Layout/
+site/
+
+# Zips
+*.zip
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Arquivos de desenvolvimento
+*.txt
+*.docx
+*.pdf
