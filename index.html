@@ -441,9 +441,15 @@ button,input,textarea,select{font-family:inherit}
 .bb-text{}
 .bb-text p{font-size:.95rem;color:rgba(255,255,255,.75);font-weight:300;max-width:460px;margin-top:8px}
 .bb-badge{
-  flex-shrink:0;background:rgba(0,0,0,.2);
-  border-radius:10px;padding:20px 28px;text-align:center;
+  flex-shrink:0;text-align:center;
 }
+.bb-badge img{
+  display:block;max-width:200px;width:100%;
+  border-radius:10px;
+  box-shadow:0 8px 32px rgba(0,0,0,.35);
+  transition:transform var(--tr),box-shadow var(--tr);
+}
+.bb-badge img:hover{transform:scale(1.04);box-shadow:0 12px 40px rgba(0,0,0,.5)}
 .bb-badge-sub{font-family:var(--font-head);font-size:.65rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px}
 .bb-badge-name{font-family:var(--font-head);font-size:2rem;font-weight:700;color:#fff;letter-spacing:.04em;text-transform:uppercase}
 
@@ -890,9 +896,9 @@ footer{background:var(--black);padding:56px 0 28px}
         </a>
       </div>
       <div class="bb-badge rv d2">
-        <div class="bb-badge-sub">Empresa Irmã</div>
-        <div class="bb-badge-name">Brasimek</div>
-        <div class="bb-badge-sub" style="margin-top:4px">Campinas · SP</div>
+        <a href="https://brasimek.com.br" target="_blank" rel="noopener">
+          <img src="img/brasimek_logo.png" alt="Brasimek Engenharia e Equipamentos"/>
+        </a>
       </div>
     </div>
   </div>
