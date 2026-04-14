@@ -426,13 +426,16 @@ button,input,textarea,select{font-family:inherit}
    BRASIMEK BAND
 ───────────────────────────────────────────────────── */
 #brasimek-band{
-  padding:60px 0;background:var(--blue);position:relative;overflow:hidden;
+  padding:60px 0;background:var(--black);position:relative;overflow:hidden;
+}
+.bb-facade{
+  position:absolute;inset:0;
+  background:url('img/brasimek.jpg') center/cover no-repeat;
+  opacity:.2;
 }
 .bb-noise{
   position:absolute;inset:0;pointer-events:none;
-  background:repeating-linear-gradient(
-    0deg,transparent,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 4px
-  );
+  background:linear-gradient(to right, rgba(0,0,0,.6) 0%, rgba(0,0,0,.2) 100%);
 }
 .bb-inner{
   display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;
@@ -882,6 +885,7 @@ footer{background:var(--black);padding:56px 0 28px}
 
 <!-- ══ BRASIMEK BAND ══ -->
 <section id="brasimek-band">
+  <div class="bb-facade"></div>
   <div class="bb-noise"></div>
   <div class="container">
     <div class="bb-inner">
